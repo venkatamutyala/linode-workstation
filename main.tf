@@ -22,5 +22,5 @@ data "http" "example" {
 }
 
 output "keys" {
-    value = split("\n",data.http.example.body)
+    value = compact(split("\n",data.http.example.body))
 }

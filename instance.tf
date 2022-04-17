@@ -34,7 +34,7 @@ cd /home/venkatamutyala
 git clone https://github.com/asdf-vm/asdf.git /home/venkatamutyala/.asdf
 curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | zsh
 sed -i 's/plugins=(git)/plugins=(git asdf)/' /home/venkatamutyala/.zshrc
-EOF"
+EOF
 
 EOF
   images = ["linode/ubuntu20.04"]

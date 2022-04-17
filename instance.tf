@@ -6,7 +6,7 @@ resource "linode_stackscript" "bootstrap" {
   description = "Installs all core software"
   script = <<EOF
 #!/bin/bash -e
-exec > >(tee -i /var/log/stackscript.log)
+set -x
 sudo apt-get update
 sudo apt-get -y install zsh
 sudo apt-get -y install \

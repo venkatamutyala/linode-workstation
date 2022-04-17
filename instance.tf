@@ -7,6 +7,7 @@ resource "linode_stackscript" "bootstrap" {
   script = <<EOF
 #!/bin/bash -e
 set -x
+exec > >(tee -i /var/log/stackscript.log)
 sudo apt-get update
 sudo apt-get -y install zsh
 sudo apt-get -y install \
@@ -28,7 +29,7 @@ sudo touch /home/venkatamutyala/.zshrc
 sudo cp -r ~/.ssh /home/venkatamutyala/
 chown -R venkatamutyala:venkatamutyala /home/venkatamutyala
 
-sudo -i -u venkatamutyala zsh << "EOF
+sudo -i -u venkatamutyala zsh << cat EOF
 cd /home/venkatamutyala
 git clone https://github.com/asdf-vm/asdf.git /home/venkatamutyala/.asdf
 curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | zsh

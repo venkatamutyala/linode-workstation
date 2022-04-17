@@ -2,6 +2,7 @@
 
 
 resource "linode_stackscript" "bootstrap" {
+  label = "bootstrap"
   description = "Installs all core software"
   script = <<EOF
 #!/bin/bash

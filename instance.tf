@@ -9,7 +9,7 @@ data "linode_images" "ubuntu" {
 
 resource "linode_instance" "venkata-workstation" {
     label = "venkata-workstation"
-    image = data.linode_images.ubuntu.id
+    image = data.linode_images.ubuntu
     region = "us-southeast"
     type = "g7-highmem-1"
     authorized_keys = local.authorized_keys

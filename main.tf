@@ -8,7 +8,7 @@ resource "linode_domain" "yolo_venkatamutyala_com" {
     soa_email = "venkata@venkatamutyala.com"
 }
 
-resource "linode_instance" "web" {
+resource "linode_instance" "venkata-workstation" {
     label = "venkata-workstation"
     image = "linode/ubuntu20.04"
     region = "us-southeast"

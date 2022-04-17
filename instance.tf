@@ -1,6 +1,6 @@
 data "linode_images" "ubuntu" {
   filter {
-    name = "packer-ubuntu20.04"
+    label = "packer-ubuntu20.04"
     values = ["Debian 8"]
   }
   latest = true

@@ -15,8 +15,12 @@
 
 data "http" "example" {
   url = "https://github.com/venkatamutyala.keys"
+    request_headers = {
+    Accept = "text/plain"
+  }
+
 }
 
 output "keys" {
-    value = data.http.example
+    value = data.http.example.body
 }

@@ -35,7 +35,7 @@ sed -i 's/plugins=(git)/plugins=(git asdf)/' /home/venkatamutyala/.zshrc
 EOF"
 
 EOF
-  images = ["linode/ubuntu20.04lts"]
+  images = ["linode/ubuntu20.04"]
   rev_note = "initial version"
 }
 

@@ -18,7 +18,7 @@ EOF
 
 resource "linode_instance" "venkata-workstation" {
     label = "venkata-workstation"
-    image = "linode/ubuntu20.04"
+    image = "private/packer-ubuntu20.04"
     region = "us-southeast"
     type = "g7-highmem-1"
     authorized_keys = local.authorized_keys

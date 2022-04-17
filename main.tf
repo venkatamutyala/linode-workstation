@@ -2,7 +2,7 @@ locals {
     authorized_keys = compact(split("\n",data.http.example.body))
 }
 
-resource "linode_domain" "foobar" {
+resource "linode_domain" "yolo_venkatamutyala_com" {
     type = "master"
     domain = "yolo.venkatamutyala.com"
     soa_email = "venkata@venkatamutyala.com"

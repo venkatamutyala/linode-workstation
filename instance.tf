@@ -7,7 +7,6 @@ resource "linode_instance" "venkata-workstation" {
     type = "g7-highmem-1"
     authorized_keys = local.authorized_keys
 
-    stackscript_id = linode_stackscript.bootstrap.id
     swap_size = 256
     private_ip = true
 }

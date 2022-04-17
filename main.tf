@@ -7,8 +7,10 @@ terraform {
     }
   }
   required_providers {
-    source  = "linode/linode"
-    linode = "1.27.0"
+    linode = {
+      source  = "linode/linode"
+      version = "1.27.0"
+    }
   }
 }
 

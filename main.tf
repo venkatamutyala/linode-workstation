@@ -16,8 +16,6 @@ resource "linode_instance" "venkata-workstation" {
     authorized_keys = local.authorized_keys
 
 
-    group = "foo"
-    tags = [ "foo" ]
     swap_size = 256
     private_ip = true
 }

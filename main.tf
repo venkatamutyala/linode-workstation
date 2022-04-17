@@ -2,6 +2,12 @@ locals {
     authorized_keys = compact(split("\n",data.http.example.body))
 }
 
+resource "linode_domain" "foobar" {
+    type = "master"
+    domain = "yolo.venkatamutyala.com"
+    soa_email = "venkata@venkatamutyala.com"
+}
+
 resource "linode_instance" "web" {
     label = "venkata-workstation"
     image = "linode/ubuntu20.04"

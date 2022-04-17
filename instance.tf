@@ -29,12 +29,12 @@ sudo touch /home/venkatamutyala/.zshrc
 sudo cp -r ~/.ssh /home/venkatamutyala/
 chown -R venkatamutyala:venkatamutyala /home/venkatamutyala
 
-sudo -i -u venkatamutyala zsh << EOF
+sudo -i -u venkatamutyala zsh << EOF2
 cd /home/venkatamutyala
 git clone https://github.com/asdf-vm/asdf.git /home/venkatamutyala/.asdf
 curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | zsh
 sed -i 's/plugins=(git)/plugins=(git asdf)/' /home/venkatamutyala/.zshrc
-EOF"
+EOF2
 
 EOF
   images = ["linode/ubuntu20.04"]

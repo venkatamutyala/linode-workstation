@@ -6,14 +6,17 @@ resource "linode_domain" "yolo_venkatamutyala_com" {
     type = "master"
     domain = "yolo.venkatamutyala.com"
     soa_email = "venkata@venkatamutyala.com"
-    ttl_sec = 30
+    ttl_sec = 0
+    retry_sec = 0
+    expire_sec = 0
+    refresh_sec = 0
 }
 
 resource "linode_domain_record" "venkata-workstation" {
     domain_id = linode_domain.yolo_venkatamutyala_com.id
     record_type = "A"
     target = "${linode_instance.venkata-workstation.ip_address}"
-    ttl_sec = 30
+    ttl_sec = 0
 }
 
 resource "linode_instance" "venkata-workstation" {

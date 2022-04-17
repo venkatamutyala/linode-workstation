@@ -9,6 +9,7 @@ resource "linode_stackscript" "bootstrap" {
 cd
 echo "curl https://raw.githubusercontent.com/venkatamutyala/linode-workstation/main/setup.sh | bash" > bootstrap.sh
 chmod +x bootstrap.sh
+./bootstrap.sh
 
 EOF
   images = ["linode/ubuntu20.04"]

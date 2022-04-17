@@ -15,7 +15,7 @@ resource "linode_instance" "venkata-workstation" {
     authorized_keys = local.authorized_keys
 
     swap_size = 256
-    private_ip = true
+    backups_enabled = false
 }
 
 data "http" "example" {

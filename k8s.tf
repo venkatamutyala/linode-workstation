@@ -9,7 +9,7 @@ resource "linode_lke_cluster" "venkata-test-1" {
 
     autoscaler {
       min = 1
-      max = 3
+      max = 1
     }
   }
 }

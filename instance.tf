@@ -22,6 +22,8 @@ resource "linode_instance" "venkata-workstation" {
       authorized_keys,
       image
     ]
+    
+    prevent_destroy = true
 
   }
 }

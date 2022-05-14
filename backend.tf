@@ -1,5 +1,5 @@
 terraform {
-  required_version = "1.1.8"
+  required_version = "1.1.9"
   backend "remote" {
     organization = "venkata-mutyala"
     workspaces {
@@ -9,7 +9,7 @@ terraform {
   required_providers {
     linode = {
       source  = "linode/linode"
-      version = "1.27.0"
+      version = "1.27.2"
     }
   }
 }

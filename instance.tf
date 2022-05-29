@@ -11,8 +11,8 @@ resource "linode_instance" "venkata-workstation" {
   label  = "venkata-workstation"
   image  = data.linode_images.ubuntu.images[0].id
   region = "us-southeast"
-  type = "g6-nanode-1"
-  #type            = "g7-highmem-1"
+  #type = "g6-nanode-1"
+  type            = "g7-highmem-1"
   authorized_keys = local.authorized_keys
   booted = true
 
